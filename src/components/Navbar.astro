@@ -1,0 +1,65 @@
+---
+import { navLinks } from "../utils/navLinks";
+---
+
+<nav class="nav">
+  <div class="title">
+    <div class="line"></div>
+    <p>A proyect made by <b>Frank bots maker</b></p>
+  </div>
+
+  <div class="links">
+    {
+      navLinks.map((link) => (
+        <a class="link" href={link.href}>
+          {link.title}
+        </a>
+      ))
+    }
+  </div>
+</nav>
+
+<style>
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .line {
+        height: 1.5px;
+        width: 200px;
+        background-color: var(--color-3);
+      }
+
+      p {
+        white-space: nowrap;
+      }
+    }
+
+    .links {
+      display: flex;
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+        padding: 0.5rem 1.5rem;
+        border-right: 1px solid var(--color-3);
+        transition-duration: 0.3s;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &:hover {
+          background-color: var(--color-3);
+        }
+      }
+    }
+  }
+</style>

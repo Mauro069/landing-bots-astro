@@ -1,0 +1,30 @@
+:root {
+  --color-1: #ff00f0;
+  --color-2: #fff001;
+  --color-3: #00eaff;
+  --color-4: #24d201;
+}
+
+@font-face {
+  font-family: "Good-times";
+  src: url("/fonts/good-times.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "N27";
+  src: url("/fonts/n27-regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Retro Gaming";
+  src: url("/fonts/retro-gaming.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
