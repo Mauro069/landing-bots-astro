@@ -25,11 +25,14 @@ import { navLinks } from "../utils/navLinks";
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2.5rem;
+	text-transform: uppercase;
+	font-family: 'Good times';
 
     .title {
       display: flex;
       align-items: center;
       gap: 1rem;
+      color: white;
 
       .line {
         height: 1.5px;
@@ -39,6 +42,10 @@ import { navLinks } from "../utils/navLinks";
 
       p {
         white-space: nowrap;
+
+        b {
+          color: var(--color-3);
+        }
       }
     }
 
@@ -48,6 +55,7 @@ import { navLinks } from "../utils/navLinks";
       .link {
         text-decoration: none;
         color: inherit;
+        color: white;
         padding: 0.5rem 1.5rem;
         border-right: 1px solid var(--color-3);
         transition-duration: 0.3s;
@@ -58,6 +66,7 @@ import { navLinks } from "../utils/navLinks";
 
         &:hover {
           background-color: var(--color-3);
+		  color: black;
         }
       }
     }
