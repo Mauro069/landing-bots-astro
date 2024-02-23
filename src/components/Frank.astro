@@ -1,0 +1,55 @@
+---
+import Card from "./Card.astro";
+import { cards } from "../utils/texts.ts";
+---
+
+<section class="info">
+  <div class="cards">
+    <Card
+      img={cards[1].img}
+      title={cards[1].title}
+      description={cards[1].description}
+      color="blue"
+    />
+    <Card
+      img={cards[2].img}
+      title={cards[2].title}
+      description={cards[2].description}
+      color="green"
+    />
+  </div>
+
+  <img src="/assets/frank.png" alt="frank bots maker" />
+
+  <div class="cards">
+    <Card
+      img={cards[3].img}
+      title={cards[3].title}
+      description={cards[3].description}
+      color="red"
+    />
+    <Card
+      img={cards[4].img}
+      title={cards[4].title}
+      description={cards[4].description}
+      color="yellow"
+    />
+  </div>
+</section>
+
+<style>
+  .info {
+    margin-top: 4rem;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    .cards {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+</style>

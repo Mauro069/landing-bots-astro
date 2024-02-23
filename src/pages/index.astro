@@ -1,36 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Welcome from "../components/Welcome.astro";
+import Frank from "../components/Frank.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <div class="welcome">
-      <h1 class="title">Welcome to Frank´s world!</h1>
-      <span class="description">
-        Discover the secrets of trading with Frank, the expert in trading robots
-        based on Smart Money. <br /> With years of experience in the financial markets,
-        Frank has developed a series of products and services <br /> designed to
-        take your trading to the next level. From highly efficient trading robots
-        to live account <br /> management services, Frank offers customized solutions
-        for every trader.
-      </span>
-    </div>
-
-    <div class="info">
-      <div class="cards">
-        <div class="card"></div>
-
-        <div class="card"></div>
-      </div>
-
-      <img src="/assets/frank.png" />
-
-      <div class="cards">
-        <div class="card"></div>
-
-        <div class="card"></div>
-      </div>
-    </div>
+    <Welcome />
+    <Frank />
   </main>
 </Layout>
 
@@ -40,48 +17,5 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     flex-direction: column;
     padding: 4rem;
-
-    .welcome {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 1.5rem;
-
-      .title {
-        color: white;
-        text-transform: uppercase;
-        font-family: "Good times";
-        font-size: 48px;
-      }
-
-      .description {
-        text-shadow: 2px 2px 20px var(--color-3);
-        color: var(--color-3);
-        font-family: "Retro gaming";
-      }
-    }
-
-    .info {
-      margin-top: 4rem;
-      align-self: center;
-	  display: flex;
-	  align-items: center;
-	  gap: 4rem;
-
-	  .cards {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-
-		.card {
-			height: 350px;
-			width: 275px;
-			border-radius: 16px;
-			border: 3px solid white;
-		}
-	  }
-    }
   }
 </style>
