@@ -4,45 +4,14 @@ import Welcome from "../components/Welcome.astro";
 import Frank from "../components/Frank.astro";
 import RobotCard from "../components/RobotCard.astro";
 import { robots } from "../utils/texts";
+import Robots from "../components/Robots.astro";
 ---
 
 <Layout title="Frank Bots Maker">
   <main>
     <Welcome />
     <Frank />
-
-    <section class="my-robots">
-      <h3>My Robots</h3>
-
-      <div class="cards">
-        <RobotCard
-          bgUrl={robots[1].bgUrl}
-          title={robots[1].title}
-          description={robots[1].description}
-          iconUrl={robots[1].iconUrl}
-          price={robots[1].price}
-          color={robots[1].color}
-        />
-
-        <RobotCard
-          bgUrl={robots[2].bgUrl}
-          title={robots[2].title}
-          description={robots[2].description}
-          iconUrl={robots[2].iconUrl}
-          price={robots[2].price}
-          color={robots[2].color}
-        />
-
-        <RobotCard
-          bgUrl={robots[3].bgUrl}
-          title={robots[3].title}
-          description={robots[3].description}
-          iconUrl={robots[3].iconUrl}
-          price={robots[3].price}
-          color={robots[3].color}
-        />
-      </div>
-    </section>
+    <Robots />
   </main>
 </Layout>
 
@@ -52,27 +21,5 @@ import { robots } from "../utils/texts";
     display: flex;
     flex-direction: column;
     padding: 4rem;
-  }
-
-  .my-robots {
-    padding: 8rem 4rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h3 {
-      font-family: "Good times";
-      font-size: 32px;
-    }
-
-    .cards {
-      margin: 2rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 3rem;
-    }
   }
 </style>
