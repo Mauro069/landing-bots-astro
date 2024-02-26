@@ -27,6 +27,7 @@ export const cards = {
 
 export const robots = {
   "1": {
+    bgUrl: '/assets/bg-diamond.jpg',
     iconUrl: "/assets/diamond.png",
     color: "#00E2F5",
     price: 1100,
@@ -35,7 +36,8 @@ export const robots = {
       "Monthly profitability 3-5% <br/> Customization level - low <br/> Multi-pairs support - no <br/> Strategy - Smart money <br/> works on any broker - yes <br/> professional risk management <br/> winrate 60-70% <br/> Martingala - no <br/> grid - no <br/> hedge - no <br/> license - no",
   },
   "2": {
-    iconUrl: "/assets/esmerald.png",
+    bgUrl: '/assets/bg-emerald.jpg',
+    iconUrl: "/assets/emerald.png",
     color: "#01D300",
     price: 2500,
     title: "Emerald-V5",
@@ -43,6 +45,7 @@ export const robots = {
       "Monthly profitability 5-8% <br/> Customization level - half <br/> Multi-pairs support - no <br/> Strategy - Smart money <br/> works on any broker - yes <br/> professional risk management <br/> winrate 75-80% <br/> Martingala - no <br/> grid - no <br/> hedge - no <br/> license - no",
   },
   "3": {
+    bgUrl: '/assets/bg-zafiro.jpg',
     iconUrl: "/assets/zafiro.png",
     color: "#E807DF",
     price: 3500,
