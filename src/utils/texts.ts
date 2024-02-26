@@ -30,27 +30,30 @@ export const robots = {
     bgUrl: '/assets/bg-diamond.jpg',
     iconUrl: "/assets/diamond.png",
     color: "#00E2F5",
-    price: 1100,
+    originalPrice: 1100,
+    priceWithDiscount: 935,
     title: "Diamond-V5",
     description:
-      "Monthly profitability 3-5% <br/> Customization level - low <br/> Multi-pairs support - no <br/> Strategy - Smart money <br/> works on any broker - yes <br/> professional risk management <br/> winrate 60-70% <br/> Martingala - no <br/> grid - no <br/> hedge - no <br/> license - no",
+      "Monthly profitability 5-8% <br/> ratio 1:3 <br/> effectiveness - 55% <br/> risk management - customizable <br/> news filters - yes <br/> daily operations - Average of 1 per day <br/> winrate 60-70%",
   },
   "2": {
     bgUrl: '/assets/bg-emerald.jpg',
     iconUrl: "/assets/emerald.png",
     color: "#01D300",
-    price: 2500,
+    originalPrice: 2500,
+    priceWithDiscount: 2215,
     title: "Emerald-V5",
     description:
-      "Monthly profitability 5-8% <br/> Customization level - half <br/> Multi-pairs support - no <br/> Strategy - Smart money <br/> works on any broker - yes <br/> professional risk management <br/> winrate 75-80% <br/> Martingala - no <br/> grid - no <br/> hedge - no <br/> license - no",
+      "Monthly profitability 8-12% <br/> ratio 1:6 <br/> effectiveness - 75% <br/> risk management - customizable <br/> news filters - yes <br/> daily operations - Average of 1 per day <br/> winrate 75-80%",
   },
   "3": {
     bgUrl: '/assets/bg-zafiro.jpg',
     iconUrl: "/assets/zafiro.png",
     color: "#E807DF",
-    price: 3500,
+    originalPrice: 3500,
+    priceWithDiscount: 2975,
     title: "Zafiro-V5",
     description:
-      "Monthly profitability 3-5% <br/> Customization level - high <br/> Multi-pairs support - yes <br/> Strategy - Smart money <br/> works on any broker - yes <br/> professional risk management <br/> winrate 80-90% <br/> Martingala - no <br/> grid - no <br/> hedge - no <br/> license - no",
+      "Monthly profitability 12-21% <br/> ratio 1:12 <br/> effectiveness - 95% <br/> risk management - customizable <br/> news filters - yes <br/> daily operations - Average of 1 per day <br/> winrate 80-90%",
   },
 };

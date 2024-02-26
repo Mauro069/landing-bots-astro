@@ -5,12 +5,13 @@ interface Props {
   title: string;
   iconUrl: string;
   description: string;
-  price: number;
+  originalPrice: number;
+  priceWithDiscount: number
   color: string;
   bgUrl: string;
 }
 
-const { description, iconUrl, price, title, color, bgUrl } = Astro.props;
+const { description, iconUrl, originalPrice, priceWithDiscount, title, color, bgUrl } = Astro.props;
 ---
 
 <div class="card" style={{ borderColor: color, color }}>
@@ -21,7 +22,8 @@ const { description, iconUrl, price, title, color, bgUrl } = Astro.props;
     <RenderText text={description} />
     <div class="price">
       <p>Price</p>
-      <b>${price}</b>
+      <b class="original">${originalPrice}</b>
+      <b>${priceWithDiscount}</b>
     </div>
 
     <button style={{ borderColor: color, backgroundColor: color }}> Buy</button>
@@ -73,6 +75,13 @@ const { description, iconUrl, price, title, color, bgUrl } = Astro.props;
 
       .price {
         font-size: 38px;
+        display: flex;
+        flex-direction: column;
+
+        .original {
+          font-size: 16px;
+          text-decoration: line-through;
+        }
       }
 
       button {
