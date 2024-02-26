@@ -1,0 +1,30 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+
+const lines = text.split("<br/>");
+---
+
+<span>
+  {
+    lines.map((line, index) => {
+      return (
+        <p>
+          {line}
+          {index < lines.length - 1 && <br class="space" />}
+        </p>
+      );
+    })
+  }
+</span>
+
+<style>
+  span {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+</style>
