@@ -1,0 +1,31 @@
+.buttonList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "N27";
+
+  h5 {
+    font-size: 16px;
+  }
+
+  .options {
+    display: flex;
+    gap: 1rem;
+
+    .option {
+      cursor: pointer;
+      background-color: white;
+      padding: 1rem 2rem;
+      border-radius: 32px;
+      border: none;
+      transition: 0.3s;
+      font-weight: bold;
+      font-family: "N27";
+      font-size: 16px;
+
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+}
