@@ -1,5 +1,5 @@
 <section class="welcome">
-  <h1 class="title">Welcome to Frank´s world!</h1>
+  <h1 class="title">Welcome to <br /> Frank´s world!</h1>
   <span class="description">
     Discover the secrets of trading with Frank, the expert in trading robots
     based on Smart Money. <br /> With years of experience in the financial markets,
@@ -14,9 +14,10 @@
   .welcome {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    text-align: center;
 
     .title {
       color: white;
@@ -30,6 +31,18 @@
       color: var(--color-3);
       font-family: "Retro gaming";
       font-size: 14px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    .welcome {
+      width: 100%;
+      align-items: flex-start;
+      text-align: left;
     }
   }
 
@@ -37,6 +50,13 @@
     .welcome {
       .title {
         font-size: 48px;
+      }
+
+      .description {
+        font-size: 16px;
+        br {
+          display: block;
+        }
       }
     }
   }
