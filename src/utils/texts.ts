@@ -19,7 +19,7 @@ export const cards = {
   },
   "4": {
     img: "/assets/4.png",
-    title: "No need for manual adjustments",
+    title: "No need setfiles",
     description:
       "With our robots, you don't need to make complicated manual adjustments. Everything is designed to work automatically and efficiently. From risk management to trade execution, our products are optimized to give you consistent results without the need for human intervention.",
   },
@@ -27,33 +27,54 @@ export const cards = {
 
 export const robots = {
   "1": {
-    bgUrl: '/assets/bg-diamond.jpg',
+    bgUrl: "/assets/bg-diamond.jpg",
     iconUrl: "/assets/diamond.png",
     color: "#00E2F5",
     originalPrice: 1100,
     priceWithDiscount: 935,
     title: "Diamond-V5",
-    description:
-      "Monthly profitability 5-8% <br/> ratio 1:3 <br/> effectiveness - 55% <br/> risk management - customizable <br/> news filters - yes <br/> daily operations - Average of 1 per day <br/> winrate 60-70%",
+    description: {
+      "monthly profitability": "5-8%",
+      ratio: "1:3",
+      effectiveness: "55%",
+      "risk management": "customizable",
+      "news filters": "yes",
+      "daily operations": "Average of 1 per day",
+      winrate: "60-70%",
+    },
   },
   "2": {
-    bgUrl: '/assets/bg-emerald.jpg',
+    bgUrl: "/assets/bg-emerald.jpg",
     iconUrl: "/assets/emerald.png",
     color: "#01D300",
     originalPrice: 2500,
     priceWithDiscount: 2215,
     title: "Emerald-V5",
-    description:
-      "Monthly profitability 8-12% <br/> ratio 1:6 <br/> effectiveness - 75% <br/> risk management - customizable <br/> news filters - yes <br/> daily operations - Average of 1 per day <br/> winrate 75-80%",
+    description: {
+      "monthly profitability": "5-8%",
+      ratio: "1:3",
+      effectiveness: "55%",
+      "risk management": "customizable",
+      "news filters": "yes",
+      "daily operations": "Average of 1 per day",
+      winrate: "60-70%",
+    },
   },
   "3": {
-    bgUrl: '/assets/bg-zafiro.jpg',
+    bgUrl: "/assets/bg-zafiro.jpg",
     iconUrl: "/assets/zafiro.png",
     color: "#E807DF",
     originalPrice: 3500,
     priceWithDiscount: 2975,
     title: "Zafiro-V5",
-    description:
-      "Monthly profitability 12-21% <br/> ratio 1:12 <br/> effectiveness - 95% <br/> risk management - customizable <br/> news filters - yes <br/> daily operations - Average of 1 per day <br/> winrate 80-90%",
+    description: {
+      "monthly profitability": "5-8%",
+      ratio: "1:3",
+      effectiveness: "55%",
+      "risk management": "customizable",
+      "news filters": "yes",
+      "daily operations": "Average of 1 per day",
+      winrate: "60-70%",
+    },
   },
 };

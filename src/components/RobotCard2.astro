@@ -6,12 +6,20 @@ interface Props {
   iconUrl: string;
   description: any;
   originalPrice: number;
-  priceWithDiscount: number
+  priceWithDiscount: number;
   color: string;
   bgUrl: string;
 }
 
-const { description, iconUrl, originalPrice, priceWithDiscount, title, color, bgUrl } = Astro.props;
+const {
+  description,
+  iconUrl,
+  originalPrice,
+  priceWithDiscount,
+  title,
+  color,
+  bgUrl,
+} = Astro.props;
 ---
 
 <div class="card" style={{ borderColor: color, color }}>
@@ -20,13 +28,14 @@ const { description, iconUrl, originalPrice, priceWithDiscount, title, color, bg
     <h4>{title}</h4>
     <img src={iconUrl} alt={title} />
     <RenderText color={color} text={description} />
-    <div class="price">
-      <p>Price</p>
-      <b class="original">${originalPrice}</b>
-      <b>${priceWithDiscount}</b>
-    </div>
 
-    <button style={{ borderColor: color, backgroundColor: color }}> Buy</button>
+    <button style={{ borderColor: color, backgroundColor: color }}>
+      <span>Buy</span>
+
+      <div class="price">
+        Price ${priceWithDiscount}
+      </div>
+    </button>
   </div>
 </div>
 
@@ -53,7 +62,7 @@ const { description, iconUrl, originalPrice, priceWithDiscount, title, color, bg
       object-fit: cover;
       top: 0;
       z-index: 1;
-      filter: brightness(0.35);
+      filter: brightness(0.3);
     }
 
     .info {
@@ -74,7 +83,7 @@ const { description, iconUrl, originalPrice, priceWithDiscount, title, color, bg
         object-fit: contain;
       }
 
-      .price {
+      /* .price {
         font-size: 38px;
         display: flex;
         flex-direction: column;
@@ -83,12 +92,12 @@ const { description, iconUrl, originalPrice, priceWithDiscount, title, color, bg
           font-size: 16px;
           text-decoration: line-through;
         }
-      }
+      } */
 
       button {
         width: 100%;
         border-radius: 32px;
-        padding: 0.75rem 0;
+        padding: 0.75rem;
         cursor: pointer;
         text-transform: uppercase;
         font-family: "Retro gaming";
@@ -97,6 +106,18 @@ const { description, iconUrl, originalPrice, priceWithDiscount, title, color, bg
         font-size: 24px;
         color: white;
         transition-duration: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .price {
+          display: flex;
+          gap: 0.3rem;
+          background-color: white;
+          color: black;
+          padding: 0.3rem 0.5rem;
+          border-radius: 16px;
+        }
 
         &:hover {
           transform: scale(1.03);
