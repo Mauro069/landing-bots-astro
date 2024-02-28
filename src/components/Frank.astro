@@ -42,14 +42,27 @@ import { cards } from "../utils/texts.ts";
     margin-top: 4rem;
     align-self: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 4rem;
 
     .cards {
       height: 100%;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
+    }
+  }
+
+  @media (min-width: 1060px) {
+    .info {
+      flex-direction: row;
+
+      .cards {
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
     }
   }
 </style>
