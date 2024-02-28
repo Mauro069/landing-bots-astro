@@ -5,13 +5,19 @@ interface Props {
   title: string;
   iconUrl: string;
   description: any;
-  originalPrice: number;
-  priceWithDiscount: number
+  priceWithDiscount: number;
   color: string;
   bgUrl: string;
 }
 
-const { description, iconUrl, originalPrice, priceWithDiscount, title, color, bgUrl } = Astro.props;
+const {
+  description,
+  iconUrl,
+  priceWithDiscount,
+  title,
+  color,
+  bgUrl,
+} = Astro.props;
 ---
 
 <div class="card" style={{ borderColor: color, color }}>
@@ -22,7 +28,6 @@ const { description, iconUrl, originalPrice, priceWithDiscount, title, color, bg
     <RenderText color={color} text={description} />
     <div class="price">
       <p>Price</p>
-      <b class="original">${originalPrice}</b>
       <b>${priceWithDiscount}</b>
     </div>
 
