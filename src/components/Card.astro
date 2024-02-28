@@ -16,18 +16,36 @@ const colors = {
 };
 ---
 
-<div class="card" style={{ borderColor: colors[color] }}>
+<div
+  class="card"
+  style={{
+    borderColor: colors[color],
+    backgroundImage: `linear-gradient(
+      var(--rotate),
+      ${colors[color]},
+      ${colors[color]}10 43%,
+      ${colors[color]}50
+)`,
+  }}
+>
   <img src={img} alt={title} />
   <h3 style={{ color: colors[color] }}>{title}</h3>
   <span>{description}</span>
 </div>
 
 <style>
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+
   .card {
-    height: 350px;
+    background: #191c29;
     width: 275px;
+    height: 350px;
+    position: relative;
     border-radius: 16px;
-    border: 3px solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +66,54 @@ const colors = {
     span {
       font-size: 14px;
       flex: 1/2;
+    }
+  }
+
+  .card::before {
+    content: "";
+    width: 102%;
+    height: 102%;
+    border-radius: 16px;
+    background-image: linear-gradient(
+      var(--rotate),
+      inherit,
+      inherit 43%,
+      inherit
+    );
+    position: absolute;
+    z-index: -1;
+    animation: spin 2.5s linear infinite;
+  }
+
+  .card::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 90%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(350px / 6));
+    background-image: linear-gradient(
+      var(--rotate),
+      inherit,
+      inherit 43%,
+      inherit
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
     }
   }
 </style>
