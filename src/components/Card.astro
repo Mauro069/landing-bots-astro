@@ -17,15 +17,9 @@ const colors = {
 ---
 
 <div
-  class="card"
+  class={`card ${color}`}
   style={{
     borderColor: colors[color],
-    backgroundImage: `linear-gradient(
-      var(--rotate),
-      ${colors[color]},
-      ${colors[color]}10 43%,
-      ${colors[color]}50
-)`,
   }}
 >
   <img src={img} alt={title} />
@@ -41,7 +35,8 @@ const colors = {
   }
 
   .card {
-    background: #191c29;
+    /* background: #191c29; */
+    background-color: black;
     width: 275px;
     height: 350px;
     position: relative;
@@ -68,23 +63,50 @@ const colors = {
       flex: 1/2;
     }
   }
-
   .card::before {
     content: "";
-    width: 102%;
+    width: 104%;
     height: 102%;
     border-radius: 16px;
-
-    /* TODO: Crear una clase dependiendo el color para cambiar el gradient */
-    background-image: linear-gradient(
-      var(--rotate),
-      inherit,
-      inherit 43%,
-      inherit
-    );
     position: absolute;
     z-index: -1;
     animation: spin 2.5s linear infinite;
+  }
+
+  .card.yellow::before {
+    background-image: linear-gradient(
+      var(--rotate),
+      #fff001,
+      #8b8202 43%,
+      #fdbe49
+    );
+  }
+
+  .card.red::before {
+    background-image: linear-gradient(
+      var(--rotate),
+      #ff3632,
+      #850402 43%,
+      #f0605d
+    );
+  }
+
+  .card.green::before {
+    background-image: linear-gradient(
+      var(--rotate),
+      #24d201,
+      #198603 43%,
+      #86ee71
+    );
+  }
+
+  .card.blue::before {
+    background-image: linear-gradient(
+      var(--rotate),
+      #00eaff,
+      #24a7db 43%,
+      #73eaf5
+    );
   }
 
   .card::after {
@@ -94,20 +116,50 @@ const colors = {
     left: 0;
     right: 0;
     z-index: -1;
-    height: 90%;
+    height: 100%;
     width: 100%;
     margin: 0 auto;
     transform: scale(0.8);
     filter: blur(calc(350px / 6));
-    background-image: linear-gradient(
-      var(--rotate),
-      inherit,
-      inherit 43%,
-      inherit
-    );
     opacity: 1;
     transition: opacity 0.5s;
     animation: spin 2.5s linear infinite;
+  }
+
+  .card.yellow::after {
+    background-image: linear-gradient(
+      var(--rotate),
+      #fff001,
+      #8b8202 43%,
+      #fdbe49
+    );
+  }
+
+  .card.red::after {
+    background-image: linear-gradient(
+      var(--rotate),
+      #ff3632,
+      #850402 43%,
+      #f0605d
+    );
+  }
+
+  .card.green::after {
+    background-image: linear-gradient(
+      var(--rotate),
+      #24d201,
+      #198603 43%,
+      #86ee71
+    );
+  }
+
+  .card.blue::after {
+    background-image: linear-gradient(
+      var(--rotate),
+      #00eaff,
+      #24a7db 43%,
+      #73eaf5
+    );
   }
 
   @keyframes spin {
