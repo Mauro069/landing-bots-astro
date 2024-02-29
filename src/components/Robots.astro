@@ -54,9 +54,18 @@ import RobotCard from "./RobotCard.astro";
     .cards {
       margin: 2rem 0;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       gap: 3rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .my-robots {
+      .cards {
+        flex-direction: row;
+      }
     }
   }
 </style>
