@@ -12,6 +12,10 @@ export const navLinks = [
     href: "#services",
   },
   {
+    title: "My Live Results",
+    href: "#live-results",
+  },
+  {
     title: "Faq",
     href: "#faq",
   },
