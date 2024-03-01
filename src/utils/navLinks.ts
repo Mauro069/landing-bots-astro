@@ -16,6 +16,10 @@ export const navLinks = [
     href: "#live-results",
   },
   {
+    title: "Contact",
+    href: "#contact",
+  },
+  {
     title: "Faq",
     href: "#faq",
   },
