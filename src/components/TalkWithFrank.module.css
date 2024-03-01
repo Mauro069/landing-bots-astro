@@ -1,3 +1,5 @@
+@import '../globals.css';
+
 .talk-with-frank {
   padding: 2rem 4rem;
   color: white;
@@ -65,8 +67,6 @@
       padding: 1rem;
       border-radius: 32px;
 
-      
-
       &:hover {
         transform: scale(1.04);
       }
@@ -74,20 +74,3 @@
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
