@@ -4,7 +4,7 @@ import { cards } from "../utils/texts.ts";
 ---
 
 <section id="home" class="info">
-  <div class="cards">
+  <div class="cards animate__animated animate__bounceInLeft">
     <Card
       img={cards[1].img}
       title={cards[1].title}
@@ -19,9 +19,13 @@ import { cards } from "../utils/texts.ts";
     />
   </div>
 
-  <img src="/assets/frank.png" alt="frank bots maker" />
+  <img
+    class="animate__animated animate__bounceInDown"
+    src="/assets/frank.png"
+    alt="frank bots maker"
+  />
 
-  <div class="cards">
+  <div class="cards animate__animated animate__bounceInRight">
     <Card
       img={cards[3].img}
       title={cards[3].title}
