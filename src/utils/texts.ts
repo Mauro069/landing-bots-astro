@@ -25,12 +25,24 @@ export const cards = {
   },
 };
 
-export const robots = {
+
+export type RobotType = 'emerald' | 'diamond' | 'zafiro'
+
+export interface Robot {
+  title: string
+  iconUrl: string
+  description: any
+  priceWithDiscount: number
+  color: string
+  bgUrl: string
+  type: RobotType
+}
+
+export const robots: any = {
   "1": {
     bgUrl: "/assets/bg-diamond.jpg",
     iconUrl: "/assets/diamond.png",
     color: "#00E2F5",
-    originalPrice: 1100,
     priceWithDiscount: 935,
     title: "Diamond-V5",
     description: {
@@ -41,12 +53,12 @@ export const robots = {
       "daily operations": "1 per day",
       "challenge winrate": "55%",
     },
+    type: "diamond"
   },
   "2": {
     bgUrl: "/assets/bg-emerald.jpg",
     iconUrl: "/assets/emerald.png",
     color: "#01D300",
-    originalPrice: 2500,
     priceWithDiscount: 2215,
     title: "Emerald-V5",
     description: {
@@ -57,12 +69,12 @@ export const robots = {
       "daily operations": "1 per day",
       "challenge winrate": "75%",
     },
+    type: "emerald"
   },
   "3": {
     bgUrl: "/assets/bg-zafiro.jpg",
     iconUrl: "/assets/zafiro.png",
     color: "#E807DF",
-    originalPrice: 3500,
     priceWithDiscount: 2975,
     title: "Zafiro-V5",
     description: {
@@ -73,5 +85,12 @@ export const robots = {
       "daily operations": "1 per day",
       "challenge winrate": "95%",
     },
+    type: "zafiro"
   },
 };
+
+export const coinbaseLinks = {
+  emerald: "https://commerce.coinbase.com/checkout/132066b6-b37b-47c0-9b80-d4ebf95d831f",
+  diamond: "https://commerce.coinbase.com/checkout/d17e7eeb-0a2d-498a-ac11-36eefad9f95f",
+  zafiro: "https://commerce.coinbase.com/checkout/771bf0bf-afbb-489c-9bd9-95a8d4806409"
+}

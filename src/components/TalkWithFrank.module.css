@@ -53,11 +53,11 @@
     transition-duration: .3s;
 
     .wsp {
-      background-color: rgb(39, 195, 11);
+      background-color: #0DBF42;
     }
 
     .tl {
-      background-color: rgb(40, 156, 206);
+      background-color: #28A7E8;
     }
 
     a {
