@@ -68,15 +68,11 @@ const PaymentOptions = ({
   closeModal: () => void
 }) => {
   const [show, setShow] = useState(false)
-  const [copied, setCopied] = useState(null)
+  const [copied, setCopied] = useState<any>(null)
 
   function copyAddress (address: string, coin: string) {
     navigator.clipboard.writeText(address)
-    setCopied('Copied address with ' + coin + ': ' + address)
-
-    setTimeout(() => {
-      setCopied(null)
-    }, 3000)
+    setCopied({ address, coin })
   }
 
   function showCryptoOptions () {
@@ -108,7 +104,9 @@ const PaymentOptions = ({
               </div>
               {copied && (
                 <span style={{ maxWidth: '400px', alignSelf: 'center' }}>
-                  {copied}
+                  <p>Copied address with {copied.coin}: </p>
+                  <br />
+                  <p>{copied.address}</p>
                 </span>
               )}
               <span>
