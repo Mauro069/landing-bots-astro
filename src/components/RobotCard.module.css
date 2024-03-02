@@ -119,7 +119,47 @@
     text-align: center;
     font-family: 'N27';
 
-    button, a {
+    .cryptoContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .cryptos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .option {
+          cursor: pointer;
+          border: 1px solid black;
+          padding: 0.3rem;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition-duration: 0.3s;
+
+          img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+          }
+
+          &:hover {
+            transform: scale(1.04);
+          }
+        }
+      }
+      
+      span a {
+        border: none;
+        padding: 0;
+        text-decoration: underline;
+      }
+    }
+
+    button,
+    a {
       text-decoration: none;
       border: 2px solid black;
       color: inherit;

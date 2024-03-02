@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './RobotCard.module.css'
-import { coinbaseLinks, type Robot, type RobotType } from '../utils/texts'
+import { type Robot, type RobotType } from '../utils/texts'
+import { coinbaseLinks, cryptoOptions } from '../utils/paymentOptions'
 
 export const RobotCard = ({
   description,
@@ -37,7 +38,7 @@ export const RobotCard = ({
         </div>
       </div>
 
-      {isOpen && <PaymentOptions robot={type} closeModal={toggle} />}
+      {true && <PaymentOptions robot={type} closeModal={toggle} />}
     </>
   )
 }
@@ -66,12 +67,35 @@ const PaymentOptions = ({
   robot: RobotType
   closeModal: () => void
 }) => {
+  function copyAddress (address: string, coin: string) {
+    navigator.clipboard.writeText(address)
+    alert('Copied address with ' + coin + ': ' + address)
+  }
+
   return (
     <div className={styles.bg}>
       <div className={styles.modal}>
         <h3>Payment Methods</h3>
 
-        <button>Crypto Payment</button>
+        <div className={styles.cryptoContainer}>
+          <span>Crypto Payment</span>
+          <div className={styles.cryptos}>
+            {cryptoOptions.map(option => {
+              return (
+                <div
+                  onClick={() => copyAddress(option.address, option.title)}
+                  className={styles.option}
+                >
+                  <img src={option.img} alt={option.title} />
+                </div>
+              )
+            })}
+          </div>
+          <span>
+            Send proof of payment {" "}
+            <a href='https://t.me/FrankBOTsMaker'>here</a>
+          </span>
+        </div>
 
         <hr />
 

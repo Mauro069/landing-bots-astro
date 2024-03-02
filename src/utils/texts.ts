@@ -88,9 +88,3 @@ export const robots: any = {
     type: "zafiro"
   },
 };
-
-export const coinbaseLinks = {
-  emerald: "https://commerce.coinbase.com/checkout/132066b6-b37b-47c0-9b80-d4ebf95d831f",
-  diamond: "https://commerce.coinbase.com/checkout/d17e7eeb-0a2d-498a-ac11-36eefad9f95f",
-  zafiro: "https://commerce.coinbase.com/checkout/771bf0bf-afbb-489c-9bd9-95a8d4806409"
-}
