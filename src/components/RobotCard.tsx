@@ -38,7 +38,7 @@ export const RobotCard = ({
         </div>
       </div>
 
-      {true && <PaymentOptions robot={type} closeModal={toggle} />}
+      {isOpen && <PaymentOptions robot={type} closeModal={toggle} />}
     </>
   )
 }
@@ -67,9 +67,20 @@ const PaymentOptions = ({
   robot: RobotType
   closeModal: () => void
 }) => {
+  const [show, setShow] = useState(false)
+  const [copied, setCopied] = useState(null)
+
   function copyAddress (address: string, coin: string) {
     navigator.clipboard.writeText(address)
-    alert('Copied address with ' + coin + ': ' + address)
+    setCopied('Copied address with ' + coin + ': ' + address)
+
+    setTimeout(() => {
+      setCopied(null)
+    }, 3000)
+  }
+
+  function showCryptoOptions () {
+    setShow(true)
   }
 
   return (
@@ -78,23 +89,34 @@ const PaymentOptions = ({
         <h3>Payment Methods</h3>
 
         <div className={styles.cryptoContainer}>
-          <span>Crypto Payment</span>
-          <div className={styles.cryptos}>
-            {cryptoOptions.map(option => {
-              return (
-                <div
-                  onClick={() => copyAddress(option.address, option.title)}
-                  className={styles.option}
-                >
-                  <img src={option.img} alt={option.title} />
-                </div>
-              )
-            })}
-          </div>
-          <span>
-            Send proof of payment {" "}
-            <a href='https://t.me/FrankBOTsMaker'>here</a>
-          </span>
+          <button style={{ background: '#FFEF01' }} onClick={showCryptoOptions}>
+            Crypto Payment
+          </button>
+          {show && (
+            <>
+              <div className={styles.cryptos}>
+                {cryptoOptions.map(option => {
+                  return (
+                    <div
+                      onClick={() => copyAddress(option.address, option.title)}
+                      className={styles.option}
+                    >
+                      <img src={option.img} alt={option.title} />
+                    </div>
+                  )
+                })}
+              </div>
+              {copied && (
+                <span style={{ maxWidth: '400px', alignSelf: 'center' }}>
+                  {copied}
+                </span>
+              )}
+              <span>
+                Send proof of payment{' '}
+                <a href='https://t.me/FrankBOTsMaker'>here</a>
+              </span>
+            </>
+          )}
         </div>
 
         <hr />
