@@ -1,66 +1,9 @@
 import { useState } from 'react'
-import styles from './RobotCard.module.css'
-import { type Robot, type RobotType } from '../utils/texts'
-import { coinbaseLinks, cryptoOptions } from '../utils/paymentOptions'
+import { coinbaseLinks, cryptoOptions } from '../../../utils/paymentOptions'
+import type { RobotType } from '../../../utils/robots'
+import styles from './styles.module.css'
 
-export const RobotCard = ({
-  description,
-  iconUrl,
-  priceWithDiscount,
-  title,
-  color,
-  bgUrl,
-  type
-}: Robot) => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggle = () => setIsOpen(open => !open)
-
-  return (
-    <>
-      <div className={styles.card} style={{ borderColor: color, color }}>
-        <img className={styles.bg} src={bgUrl} />
-        <div className={styles.info}>
-          <h4>{title}</h4>
-          <img src={iconUrl} alt={title} />
-          <RenderText color={color} text={description} />
-          <div className={styles.price}>
-            <p>Price</p>
-            <b>${priceWithDiscount}</b>
-          </div>
-
-          <button
-            onClick={toggle}
-            style={{ borderColor: color, backgroundColor: color }}
-          >
-            Buy
-          </button>
-        </div>
-      </div>
-
-      {isOpen && <PaymentOptions robot={type} closeModal={toggle} />}
-    </>
-  )
-}
-
-const RenderText = ({ text, color }: { text: string; color: string }) => {
-  const props = Object.entries(text)
-
-  return (
-    <div className={styles.description}>
-      {props.map(([key, value]) => (
-        <div className={styles.line}>
-          <p className={styles.key}>{key}</p>
-          <p style={{ color }} className={styles.value}>
-            {value}
-          </p>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-const PaymentOptions = ({
+export const PaymentOptions = ({
   robot,
   closeModal
 }: {
