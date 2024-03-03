@@ -122,7 +122,7 @@ const PaymentOptions = ({
         <span>To pay with cards, request a payment link via WhastApp</span>
         <a
           style={{ background: '#0DBF42', color: 'white' }}
-          href='https://wa.me/message/53WVGAKRZ7OSB1'
+          href='https://wa.link/yves5o'
           target='_blank'
         >
           Request
