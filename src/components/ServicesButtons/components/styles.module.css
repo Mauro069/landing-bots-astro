@@ -10,6 +10,8 @@
 
   .options {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
 
     .option {
@@ -26,6 +28,10 @@
       &:hover {
         transform: scale(1.04);
       }
+    }
+
+    .active {
+      background-color: var(--color-3);
     }
   }
 }

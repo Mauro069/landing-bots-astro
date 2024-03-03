@@ -1,12 +1,18 @@
-import styles from './ButtonList.module.css'
+import styles from './styles.module.css'
 
 interface Props {
   title: string
   options: string[]
+  handleClick?: (option: string) => void
+  optionSelected: string
 }
 
-export const Buttonlist = ({ options, title }: Props) => {
-  const handleClick = option => alert(option)
+export const Buttonlist = ({
+  options,
+  title,
+  optionSelected,
+  handleClick
+}: Props) => {
   return (
     <div className={styles.buttonList}>
       <h5>{title}</h5>
@@ -15,7 +21,9 @@ export const Buttonlist = ({ options, title }: Props) => {
           return (
             <button
               key={option}
-              className={styles.option}
+              className={`${styles.option} ${
+                optionSelected === option ? styles.active : ''
+              }`}
               onClick={() => handleClick(option)}
             >
               {option}

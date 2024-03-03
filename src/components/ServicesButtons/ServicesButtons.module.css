@@ -1,0 +1,37 @@
+.buttons-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h5 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 42px;
+    font-family: "Retro gaming";
+    color: var(--color-3);
+  }
+
+  button {
+    font-size: 16px;
+    padding: 1rem 2rem;
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--color-2);
+    transition-duration: 0.3s;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+}
