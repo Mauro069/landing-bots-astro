@@ -1,6 +1,6 @@
 export const navLinks = [
   {
-    title: "Robots",
+    title: "My Robots",
     href: "#robots",
   },
   {
