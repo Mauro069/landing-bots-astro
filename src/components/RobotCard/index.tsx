@@ -2,6 +2,7 @@ import { PaymentOptions, RenderText } from './components'
 import { useState } from 'react'
 import styles from './RobotCard.module.css'
 import type { Robot } from '../../utils/robots'
+import { coinbaseLinks } from '../../utils/paymentOptions'
 
 export const RobotCard = ({
   description,
@@ -15,6 +16,8 @@ export const RobotCard = ({
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(open => !open)
+
+  const coinbaseLink = coinbaseLinks.robot[type]
 
   return (
     <>
@@ -38,7 +41,9 @@ export const RobotCard = ({
         </div>
       </div>
 
-      {isOpen && <PaymentOptions robot={type} closeModal={toggle} />}
+      {isOpen && (
+        <PaymentOptions coinbaseLink={coinbaseLink} closeModal={toggle} />
+      )}
     </>
   )
 }

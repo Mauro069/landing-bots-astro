@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Buttonlist } from './components/ButtonList'
 import styles from './ServicesButtons.module.css'
 import { PaymentOptions } from '../RobotCard/components'
+import { coinbaseLinks } from '../../utils/paymentOptions'
 
 const capitalValues = [
   '10,000',
@@ -33,7 +34,8 @@ export const ServicesButtons = () => {
   }
 
   const priceSelected = prices[price]
-
+  const coinbaseLink = coinbaseLinks.services[accountType.toLowerCase()][price]
+  
   return (
     <>
       <div className={styles['buttons-lists']}>
@@ -66,7 +68,9 @@ export const ServicesButtons = () => {
         </div>
       </div>
 
-      {isOpen && <PaymentOptions service={true} closeModal={toggle} />}
+      {isOpen && (
+        <PaymentOptions coinbaseLink={coinbaseLink} closeModal={toggle} />
+      )}
     </>
   )
 }

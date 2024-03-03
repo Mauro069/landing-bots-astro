@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import { coinbaseLinks, cryptoOptions } from '../../../utils/paymentOptions'
-import type { RobotType } from '../../../utils/robots'
 import styles from './styles.module.css'
 
 export const PaymentOptions = ({
-  robot,
+  coinbaseLink,
   closeModal
 }: {
-  robot?: RobotType
+  coinbaseLink: string
   closeModal: () => void
-  service?: any
 }) => {
   const [show, setShow] = useState(false)
   const [copied, setCopied] = useState<any>(null)
@@ -72,17 +70,13 @@ export const PaymentOptions = ({
           Request
         </a>
 
-        {robot && (
-          <>
-            <hr />
-            <a
-              href={coinbaseLinks[robot]}
-              style={{ background: '#0556FF', color: 'white' }}
-            >
-              Coinbase
-            </a>
-          </>
-        )}
+        <hr />
+        <a
+          href={coinbaseLink}
+          style={{ background: '#0556FF', color: 'white' }}
+        >
+          Coinbase
+        </a>
 
         <hr />
 
