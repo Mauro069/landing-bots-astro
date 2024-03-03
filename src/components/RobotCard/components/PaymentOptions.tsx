@@ -7,8 +7,9 @@ export const PaymentOptions = ({
   robot,
   closeModal
 }: {
-  robot: RobotType
+  robot?: RobotType
   closeModal: () => void
+  service?: any
 }) => {
   const [show, setShow] = useState(false)
   const [copied, setCopied] = useState<any>(null)
@@ -71,14 +72,17 @@ export const PaymentOptions = ({
           Request
         </a>
 
-        <hr />
-
-        <a
-          href={coinbaseLinks[robot]}
-          style={{ background: '#0556FF', color: 'white' }}
-        >
-          Coinbase
-        </a>
+        {robot && (
+          <>
+            <hr />
+            <a
+              href={coinbaseLinks[robot]}
+              style={{ background: '#0556FF', color: 'white' }}
+            >
+              Coinbase
+            </a>
+          </>
+        )}
 
         <hr />
 

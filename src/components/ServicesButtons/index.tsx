@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Buttonlist } from './components/ButtonList'
 import styles from './ServicesButtons.module.css'
+import { PaymentOptions } from '../RobotCard/components'
 
 const capitalValues = [
   '10,000',
@@ -18,6 +19,9 @@ export const ServicesButtons = () => {
   const [price, setPrice] = useState(capitalValues[0])
   const [accountType, setAccountType] = useState(accTypesValues[0])
   const [platform, setPlatform] = useState(platformValues[0])
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => setIsOpen(open => !open)
 
   const prices = {
     '10,000': '$90',
@@ -31,34 +35,38 @@ export const ServicesButtons = () => {
   const priceSelected = prices[price]
 
   return (
-    <div className={styles['buttons-lists']}>
-      <Buttonlist
-        optionSelected={accountType}
-        handleClick={accType => setAccountType(accType)}
-        title='Type account'
-        options={accTypesValues}
-      />
+    <>
+      <div className={styles['buttons-lists']}>
+        <Buttonlist
+          optionSelected={accountType}
+          handleClick={accType => setAccountType(accType)}
+          title='Type account'
+          options={accTypesValues}
+        />
 
-      <Buttonlist
-        optionSelected={price}
-        handleClick={cap => setPrice(cap)}
-        title='Capital'
-        options={capitalValues}
-      />
+        <Buttonlist
+          optionSelected={price}
+          handleClick={cap => setPrice(cap)}
+          title='Capital'
+          options={capitalValues}
+        />
 
-      <Buttonlist
-        optionSelected={platform}
-        handleClick={platform => setPlatform(platform)}
-        title='Platform'
-        options={platformValues}
-      />
+        <Buttonlist
+          optionSelected={platform}
+          handleClick={platform => setPlatform(platform)}
+          title='Platform'
+          options={platformValues}
+        />
 
-      <div className={styles.price}>
-        <h5>Price:</h5>
-        <p>{priceSelected}</p>
+        <div className={styles.price}>
+          <h5>Price:</h5>
+          <p>{priceSelected}</p>
 
-        <button> Buy now</button>
+          <button onClick={toggle}> Buy now</button>
+        </div>
       </div>
-    </div>
+
+      {isOpen && <PaymentOptions service={true} closeModal={toggle} />}
+    </>
   )
 }
