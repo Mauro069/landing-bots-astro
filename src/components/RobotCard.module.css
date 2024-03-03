@@ -130,9 +130,10 @@
         gap: 1rem;
 
         .option {
+          background-color: black;
           cursor: pointer;
-          border: 1px solid black;
-          padding: 0.3rem;
+          border: 3px solid #FFEF01;
+          padding: 0.2rem;
           border-radius: 16px;
           display: flex;
           align-items: center;
