@@ -44,11 +44,12 @@ import { RobotCard } from "./RobotCard";
 
 <style>
   @import "../globals.css";
-  
+
   .my-robots {
     padding: 4rem 0;
     padding-top: 6rem;
     color: white;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,6 +62,7 @@ import { RobotCard } from "./RobotCard";
 
     .cards {
       margin: 2rem 0;
+      display: -webkit-flex;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -70,10 +72,9 @@ import { RobotCard } from "./RobotCard";
   }
 
   @media (min-width: 600px) {
-    .my-robots {
-      .cards {
-        flex-direction: row;
-      }
+    .my-robots .cards {
+      -webkit-flex-direction: row;
+      flex-direction: row;
     }
   }
 </style>

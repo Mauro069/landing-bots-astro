@@ -11,22 +11,26 @@ import { ServicesButtons } from "./ServicesButtons";
   @import "../globals.css";
 
   .start-now {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
     padding: 2rem 0;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-family: "N27";
     text-align: center;
     gap: 1rem;
+  }
 
-    h3 {
-      color: var(--color-3);
-      font-family: "Retro gaming";
-      text-transform: uppercase;
-      font-size: 32px;
-      padding-bottom: 1rem;
-    }
+  h3 {
+    -webkit-text-fill-color: var(--color-3);
+    font-family: "Retro gaming";
+    text-transform: uppercase;
+    font-size: 32px;
+    padding-bottom: 1rem;
   }
 </style>

@@ -3,6 +3,7 @@
 .talk-with-frank {
   padding: 2rem 4rem;
   color: white;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,24 +41,26 @@
     }
 
     &:hover {
+      -webkit-transform: scale(1.04);
       transform: scale(1.04);
     }
   }
 
   .socials {
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     animation: fadeIn 0.3s ease;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 
     .wsp {
-      background-color: #0DBF42;
+      background-color: #0dbf42;
     }
 
     .tl {
-      background-color: #28A7E8;
+      background-color: #28a7e8;
     }
 
     a {
@@ -68,9 +71,9 @@
       border-radius: 32px;
 
       &:hover {
+        -webkit-transform: scale(1.04);
         transform: scale(1.04);
       }
     }
   }
 }
-
