@@ -24,6 +24,7 @@ export const Faqs = () => {
 
           return (
             <div
+              key={q}
               className={`${styles.faq} ${isThis ? styles.active : ''}`}
               onClick={() => toggleQuestion({ q, a })}
             >
