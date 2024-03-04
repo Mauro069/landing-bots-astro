@@ -8,8 +8,8 @@
 
 @font-face {
   font-family: "Good times";
-  src: url("/fonts/good-times.otf") format("otf"),
-    url("/fonts/good-times.ttf") format("ttf");
+  src: url("/fonts/good-times.otf") format("truetype"),
+    url("/fonts/good-times.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -17,8 +17,8 @@
 
 @font-face {
   font-family: "N27";
-  src: url("/fonts/n27-regular.otf") format("otf"),
-    url("/fonts/n27-regular.otf") format("ttf");
+  src: url("/fonts/n27-regular.otf") format("truetype"),
+    url("/fonts/n27-regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -26,8 +26,8 @@
 
 @font-face {
   font-family: "Retro Gaming";
-  src: url("/fonts/retro-gaming.otf") format("otf"),
-    url("/fonts/retro-gaming.ttf") format("ttf");
+  src: url("/fonts/retro-gaming.otf") format("truetype"),
+    url("/fonts/retro-gaming.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
