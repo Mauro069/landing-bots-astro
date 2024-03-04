@@ -15,8 +15,20 @@ export const TalkWithFrank = () => {
         </button>
       ) : (
         <div className={styles.socials}>
-          <a className={styles.wsp}>Whatsapp</a>
-          <a className={styles.tl}>Telegram</a>
+          <a
+            href='https://wa.me/message/53WVGAKRZ7OSB1'
+            target='_blank'
+            className={styles.wsp}
+          >
+            Whatsapp
+          </a>
+          <a
+            href='https://t.me/FrankBOTsMaker'
+            target='_blank'
+            className={styles.tl}
+          >
+            Telegram
+          </a>
         </div>
       )}
     </section>
