@@ -1,13 +1,15 @@
 import { useState } from 'react'
-import { coinbaseLinks, cryptoOptions } from '../../../utils/paymentOptions'
+import { cryptoOptions } from '../../utils/paymentOptions'
 import styles from './styles.module.css'
 
 export const PaymentOptions = ({
   coinbaseLink,
-  closeModal
+  closeModal,
+  price
 }: {
   coinbaseLink: string
   closeModal: () => void
+  price: number
 }) => {
   const [show, setShow] = useState(false)
   const [copied, setCopied] = useState<any>(null)
@@ -79,6 +81,7 @@ export const PaymentOptions = ({
         </a>
 
         <hr />
+        <h3>Total: ${price}</h3>
 
         <button onClick={closeModal}>Close</button>
       </div>

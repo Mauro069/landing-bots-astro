@@ -1,8 +1,9 @@
-import { PaymentOptions, RenderText } from './components'
+import { RenderText } from './components'
 import { useState } from 'react'
 import styles from './RobotCard.module.css'
 import type { Robot } from '../../utils/robots'
 import { coinbaseLinks } from '../../utils/paymentOptions'
+import { PaymentOptions } from '../PaymentOptions'
 
 export const RobotCard = ({
   description,
@@ -42,7 +43,11 @@ export const RobotCard = ({
       </div>
 
       {isOpen && (
-        <PaymentOptions coinbaseLink={coinbaseLink} closeModal={toggle} />
+        <PaymentOptions
+          coinbaseLink={coinbaseLink}
+          closeModal={toggle}
+          price={priceWithDiscount}
+        />
       )}
     </>
   )
