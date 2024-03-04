@@ -3,7 +3,6 @@
 .talk-with-frank {
   padding: 2rem 4rem;
   color: white;
-  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,11 +25,13 @@
     border: none;
     cursor: pointer;
     transition-duration: 0.3s;
+    -webkit-animation: fadeIn 0.3s ease;
     animation: fadeIn 0.3s ease;
 
     img {
       width: 50px;
       height: 50px;
+      -o-object-fit: contain;
       object-fit: contain;
     }
 
@@ -41,17 +42,16 @@
     }
 
     &:hover {
-      -webkit-transform: scale(1.04);
       transform: scale(1.04);
     }
   }
 
   .socials {
-    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    -webkit-animation: fadeIn 0.3s ease;
     animation: fadeIn 0.3s ease;
     transition-duration: 0.3s;
 
@@ -71,9 +71,9 @@
       border-radius: 32px;
 
       &:hover {
-        -webkit-transform: scale(1.04);
         transform: scale(1.04);
       }
     }
   }
 }
+

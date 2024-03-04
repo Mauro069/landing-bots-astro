@@ -55,6 +55,7 @@ const colors = {
     img {
       width: 50px;
       height: 50px;
+      -o-object-fit: contain;
       object-fit: contain;
       flex: 1/2;
     }
@@ -71,6 +72,7 @@ const colors = {
     border-radius: 16px;
     position: absolute;
     z-index: -1;
+    -webkit-animation: spin 2.5s linear infinite;
     animation: spin 2.5s linear infinite;
   }
 
@@ -121,9 +123,11 @@ const colors = {
     width: 100%;
     margin: 0 auto;
     transform: scale(0.8);
+    -webkit-filter: blur(calc(350px / 6));
     filter: blur(calc(350px / 6));
     opacity: 1;
     transition: opacity 0.5s;
+    -webkit-animation: spin 2.5s linear infinite;
     animation: spin 2.5s linear infinite;
   }
 
@@ -161,6 +165,15 @@ const colors = {
       #24a7db 43%,
       #73eaf5
     );
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
   }
 
   @keyframes spin {

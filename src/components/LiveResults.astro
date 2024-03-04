@@ -14,9 +14,9 @@
 
 <style>
   @import "../globals.css";
+
   .results {
     color: white;
-    display: -webkit-flex;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -38,6 +38,7 @@
     img {
       margin: 1rem 0;
       height: 600px;
+      -o-object-fit: contain;
       object-fit: contain;
     }
 
@@ -52,7 +53,6 @@
       text-transform: uppercase;
 
       &:hover {
-        -webkit-transform: scale(1.04);
         transform: scale(1.04);
       }
     }

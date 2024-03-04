@@ -1,7 +1,6 @@
 @import "../../globals.css";
 
 .buttons-lists {
-  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -9,7 +8,6 @@
 }
 
 .price {
-  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -35,7 +33,6 @@
     transition-duration: 0.3s;
 
     &:hover {
-      -webkit-transform: scale(1.04);
       transform: scale(1.04);
     }
   }
