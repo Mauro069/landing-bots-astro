@@ -60,5 +60,13 @@
         }
       }
     }
+  
+    @media(max-width: 750px) {
+      .faq {
+        width: 90vw;
+        height: fit-content;
+        text-align: left;
+      }  
+    }
   }
 }
