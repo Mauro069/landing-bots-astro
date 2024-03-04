@@ -8,6 +8,7 @@ import WhatsIncluded from "../components/WhatsIncluded.astro";
 import StartNow from "../components/StartNow.astro";
 import LiveResults from "../components/LiveResults.astro";
 import { TalkWithFrank } from "../components/TalkWithFrank";
+import { Faqs } from "../components/Faqs";
 ---
 
 <Layout title="Frank Bots Maker">
@@ -20,6 +21,7 @@ import { TalkWithFrank } from "../components/TalkWithFrank";
     <StartNow />
     <LiveResults />
     <TalkWithFrank client:visible />
+    <Faqs client:visible />
   </main>
 </Layout>
 
@@ -30,5 +32,4 @@ import { TalkWithFrank } from "../components/TalkWithFrank";
     padding: 4rem;
   }
 </style>
-../components/TalkWithFrank.tsx
-../components/TalkWithFrank/TalkWithFrank
+../components/TalkWithFrank.tsx ../components/TalkWithFrank/TalkWithFrank
