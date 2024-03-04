@@ -6,7 +6,7 @@ export const TalkWithFrank = () => {
 
   return (
     <section id='contact' className={styles['talk-with-frank']}>
-      <h2>You want talk with Frank?</h2>
+      <h3>Contact</h3>
 
       {show ? (
         <button onClick={() => setShow(false)}>
