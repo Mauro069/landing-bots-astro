@@ -1,7 +1,7 @@
 @import "../../globals.css";
 
 .talk-with-frank {
-  padding: 2rem 4rem;
+  padding: 2rem 0;
   color: white;
   display: flex;
   flex-direction: column;
