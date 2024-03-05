@@ -39,17 +39,22 @@
     }
 
     .image-container {
+      width: 80vw;
+      max-width: 330px;
       position: relative;
-      border: 3px solid var(--color-3);
-      box-shadow: 0px 0px 10px 2px var(--color-3);
+
       transition-duration: 0.3s;
       cursor: pointer;
+      border: 3px solid var(--color-3);
+      box-shadow: 0px 0px 10px 2px var(--color-3);
+      border-radius: 16px;
 
       img {
+        width: 100%;
         position: relative;
         display: flex;
-        margin: 1rem 0;
-        height: 600px;
+        border-radius: 16px;
+        max-height: 600px;
         -o-object-fit: contain;
         object-fit: contain;
       }
@@ -76,21 +81,6 @@
 
     .image-container:hover {
       transform: scale(1.02);
-    }
-
-    a {
-      font-size: 18px;
-      text-decoration: none;
-      color: var(--color-3);
-      padding: 0.3rem 0.6rem;
-      border: 3px solid var(--color-3);
-      border-radius: 16px;
-      transition-duration: 0.3s;
-      text-transform: uppercase;
-
-      &:hover {
-        transform: scale(1.04);
-      }
     }
   }
 
