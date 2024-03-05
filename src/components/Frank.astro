@@ -20,7 +20,7 @@ import { cards } from "../utils/cards.ts";
   </div>
 
   <img
-    class="animate__animated animate__bounceInDown"
+    class="frank animate__animated animate__bounceInDown"
     src="/assets/frank.png"
     alt="frank bots maker"
   />
@@ -52,6 +52,10 @@ import { cards } from "../utils/cards.ts";
     -webkit-animation: fadeIn 0.5s ease;
     animation: fadeIn 0.5s ease;
 
+    .frank {
+      display: none;
+    }
+
     .cards {
       height: 100%;
       display: flex;
@@ -64,6 +68,10 @@ import { cards } from "../utils/cards.ts";
   @media (min-width: 1060px) {
     .info {
       flex-direction: row;
+
+      .frank {
+        display: initial;
+      }
 
       .cards {
         -webkit-flex-wrap: nowrap;
