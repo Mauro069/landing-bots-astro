@@ -14,7 +14,7 @@
   h3 {
     font-size: 32px;
     text-transform: uppercase;
-    font-family: 'Good times';
+    font-family: "Good times";
   }
 
   button {
@@ -76,6 +76,14 @@
       &:hover {
         transform: scale(1.04);
       }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .talk-with-frank {
+    h3 {
+      font-size: 24px;
     }
   }
 }

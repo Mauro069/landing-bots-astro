@@ -93,3 +93,13 @@
     }
   }
 }
+
+@media (max-width: 450px) {
+  .bg {
+    .modal {
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+}
