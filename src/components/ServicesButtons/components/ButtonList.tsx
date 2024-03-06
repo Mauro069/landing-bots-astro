@@ -15,7 +15,7 @@ export const Buttonlist = ({
 }: Props) => {
   return (
     <div className={styles.buttonList}>
-      <h5>{title}</h5>
+      <h5 className='subtitle'>{title}</h5>
       <div className={styles.options}>
         {options?.map(option => {
           return (

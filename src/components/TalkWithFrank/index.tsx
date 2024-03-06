@@ -6,12 +6,12 @@ export const TalkWithFrank = () => {
 
   return (
     <section id='contact' className={styles['talk-with-frank']}>
-      <h3>Contact</h3>
+      <h3 className={styles.title}>Contact</h3>
 
       {show ? (
-        <button onClick={() => setShow(false)}>
-          <img src='/assets/cabeza.png' />
-          <p>Talk with Frank</p>
+        <button className={styles.button} onClick={() => setShow(false)}>
+          <img className={styles.img} src='/assets/cabeza.png' />
+          <p className={styles.text}>Talk with Frank</p>
         </button>
       ) : (
         <div className={styles.socials}>

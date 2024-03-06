@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 20;
+  z-index: 99;
   padding: 1.5rem;
 
   .modal {
@@ -26,8 +26,9 @@
     gap: 1rem;
     text-align: center;
     font-family: "N27";
+    z-index: 99;
 
-    h3 {
+    .title {
       font-size: 32px;
       font-family: "Good times" !important ;
       color: black !important;
@@ -55,7 +56,7 @@
           justify-content: center;
           transition-duration: 0.3s;
 
-          img {
+          .img {
             width: 50px;
             height: 50px;
             -o-object-fit: contain;
@@ -68,14 +69,14 @@
         }
       }
 
-      span a {
+      .here {
         border: none;
         padding: 0;
         text-decoration: underline;
       }
     }
 
-    button,
+    .button,
     a {
       text-decoration: none;
       border: 2px solid black;
@@ -97,7 +98,7 @@
 @media (max-width: 450px) {
   .bg {
     .modal {
-      h3 {
+      .title {
         font-size: 24px;
       }
     }

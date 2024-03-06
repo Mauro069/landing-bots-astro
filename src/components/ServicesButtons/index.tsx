@@ -61,10 +61,10 @@ export const ServicesButtons = () => {
         />
 
         <div className={styles.price}>
-          <h5>Price:</h5>
-          <p>{priceSelected}</p>
+          <h5 className={styles.price}>Price:</h5>
+          <p className={styles.amount}>{priceSelected}</p>
 
-          <button onClick={toggle}> Buy now</button>
+          <button className={styles.button} onClick={toggle}> Buy now</button>
         </div>
       </div>
 

@@ -25,17 +25,27 @@ export const RobotCard = ({
       <div className={styles.card} style={{ borderColor: color, color }}>
         <img className={styles.bg} src={bgUrl} />
         <div className={styles.info}>
-          <h4>{title}</h4>
-          <img src={iconUrl} alt={title} />
+          <h4 className={styles.robot}>{title}</h4>
+          <img
+            className={styles.img}
+            src={iconUrl}
+            alt={title}
+            style={{ width: '100px', height: '100px' }}
+          />
           <RenderText color={color} text={description} />
           <div className={styles.price}>
-            <p>Price</p>
-            <b>${priceWithDiscount}</b>
+            <p style={{ fontSize: '38px' }} className={styles.title}>
+              Price
+            </p>
+            <b style={{ fontSize: '38px' }} className={styles.amount}>
+              ${priceWithDiscount}
+            </b>
           </div>
 
           <button
             onClick={toggle}
             style={{ borderColor: color, backgroundColor: color }}
+            className={styles.button}
           >
             Buy
           </button>

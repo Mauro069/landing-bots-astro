@@ -3,7 +3,7 @@ import { ServicesButtons } from "./ServicesButtons";
 ---
 
 <section class="start-now">
-  <h3>Start Now</h3>
+  <h3 class="title">Start Now</h3>
 
   <ServicesButtons client:visible />
 </section>
@@ -22,7 +22,7 @@ import { ServicesButtons } from "./ServicesButtons";
     gap: 1rem;
   }
 
-  h3 {
+  .title {
     -webkit-text-fill-color: var(--color-3);
     font-family: "Retro gaming";
     text-transform: uppercase;
@@ -31,7 +31,7 @@ import { ServicesButtons } from "./ServicesButtons";
   }
 
   @media (max-width: 450px) {
-    h3 {
+    .title {
       font-size: 24px;
     }
   }

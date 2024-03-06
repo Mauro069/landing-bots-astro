@@ -16,7 +16,7 @@ export const Faqs = () => {
 
   return (
     <section id='faq' className={styles['faqs-container']}>
-      <h3>Frequently Asked Questions</h3>
+      <h3 className={styles.title}>Frequently Asked Questions</h3>
 
       <div className={styles.faqs}>
         {faqs.map(({ q, a }) => {

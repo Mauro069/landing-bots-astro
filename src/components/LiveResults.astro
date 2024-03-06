@@ -1,14 +1,14 @@
 <section id="live-results" class="results">
-  <h3>MY live results</h3>
+  <h3 class="title">MY live results</h3>
 
-  <span>
+  <span class="description">
     Here you will find my daily results that have been posted every day
     consecutively for more than a year, where we show profits and losses in a
     100% transparent way!
   </span>
 
-  <a href="https://t.me/MYEASRESULTS" class="image-container">
-    <img src="/assets/results.jpg" />
+  <a style="z-index: -1;" href="https://t.me/MYEASRESULTS" class="image-container">
+    <img class="tl-container" src="/assets/results.jpg" height="600" />
     <div class="tl">
       <img width={75} height={75} src="/assets/telegram.webp" />
     </div>
@@ -27,13 +27,13 @@
     gap: 1rem;
     font-family: "N27";
 
-    h3 {
+    .title {
       font-family: "Good times";
       text-transform: uppercase;
       font-size: 32px;
     }
 
-    span {
+    .description {
       max-width: 450px;
       color: var(--color-2);
     }
@@ -42,14 +42,13 @@
       width: 80vw;
       max-width: 330px;
       position: relative;
-
       transition-duration: 0.3s;
       cursor: pointer;
       border: 3px solid var(--color-3);
       box-shadow: 0px 0px 10px 2px var(--color-3);
       border-radius: 16px;
 
-      img {
+      .tl-container {
         width: 100%;
         position: relative;
         display: flex;

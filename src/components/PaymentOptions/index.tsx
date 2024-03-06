@@ -26,10 +26,10 @@ export const PaymentOptions = ({
   return (
     <div className={styles.bg}>
       <div className={styles.modal}>
-        <h3>Payment Methods</h3>
+        <h3 className={styles.title}>Payment Methods</h3>
 
         <div className={styles.cryptoContainer}>
-          <button style={{ background: '#FFEF01' }} onClick={showCryptoOptions}>
+          <button className={styles.button} style={{ background: '#FFEF01' }} onClick={showCryptoOptions}>
             Crypto Payment
           </button>
           {show && (
@@ -40,8 +40,9 @@ export const PaymentOptions = ({
                     <div
                       onClick={() => copyAddress(option.address, option.title)}
                       className={styles.option}
+                      key={option.title}
                     >
-                      <img src={option.img} alt={option.title} />
+                      <img className={styles.img} src={option.img} alt={option.title} />
                     </div>
                   )
                 })}
@@ -55,7 +56,7 @@ export const PaymentOptions = ({
               )}
               <span>
                 Send proof of payment{' '}
-                <a href='https://t.me/FrankBOTsMaker'>here</a>
+                <a className={styles.here} href='https://t.me/FrankBOTsMaker'>here</a>
               </span>
             </>
           )}
@@ -83,7 +84,7 @@ export const PaymentOptions = ({
         <hr />
         <h3>Total: ${price}</h3>
 
-        <button onClick={closeModal}>Close</button>
+        <button className={styles.button} onClick={closeModal}>Close</button>
       </div>
     </div>
   )

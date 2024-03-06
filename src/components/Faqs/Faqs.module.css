@@ -10,8 +10,9 @@
   font-family: "N27";
   text-align: center;
   gap: 1rem;
+  z-index: -1;
 
-  h3 {
+  .title {
     font-family: "Good times";
     font-size: 32px;
     padding-bottom: 1rem;
@@ -82,7 +83,7 @@
 
 @media (max-width: 450px) {
   .faqs-container {
-    h3 {
+    .title {
       font-size: 24px;
     }
   }
