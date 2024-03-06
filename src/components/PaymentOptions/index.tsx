@@ -82,7 +82,7 @@ export const PaymentOptions = ({
         </a>
 
         <hr />
-        <h3>Total: ${price}</h3>
+        <h3 className={styles.title}>Total: ${price}</h3>
 
         <button className={styles.button} onClick={closeModal}>Close</button>
       </div>
