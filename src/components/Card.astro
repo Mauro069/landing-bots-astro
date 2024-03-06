@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   title: string;
   description: string;
@@ -22,7 +24,7 @@ const colors = {
     borderColor: colors[color],
   }}
 >
-  <img src={img} alt={title} />
+  <Image src={img} alt={title} width={50} height={50} />
   <h3 style={{ color: colors[color] }}>{title}</h3>
   <span>{description}</span>
 </div>
