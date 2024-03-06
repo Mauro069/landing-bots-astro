@@ -22,7 +22,7 @@ const MobileNavbar = () => {
         className={`${styles.title} animate__animated animate__bounceInLeft`}
       >
         <a href='#welcome' className={styles.icon}>
-          <img className={styles.icon} src='/favicon.svg' />
+          <img width={50} height={50} className={styles.icon} src='/favicon.svg' />
         </a>
         <p>
           A proyect made by <br /> <b>Frank bots maker</b>
