@@ -7,10 +7,14 @@
     100% transparent way!
   </span>
 
-  <a style="z-index: -1;" href="https://t.me/MYEASRESULTS" class="image-container">
+  <a
+    style="z-index: -1;"
+    href="https://t.me/MYEASRESULTS"
+    class="image-container"
+  >
     <img class="tl-container" src="/assets/results.jpg" height="600" />
     <div class="tl">
-      <img width={75} height={75} src="/assets/telegram.webp" />
+      <img class="tl-img" width={75} height={75} src="/assets/telegram.webp" />
     </div>
   </a>
 </section>
@@ -69,12 +73,14 @@
         top: 0;
         left: 0;
         border-radius: 16px;
+      }
 
-        img {
-          width: 75px;
-          height: 75px;
-          object-fit: contain;
-        }
+      .tl-img {
+        width: 75px;
+        height: 75px;
+        box-shadow: 0px 0px 8px 2px var(--color-3);
+        object-fit: contain;
+        border-radius: 100%;
       }
     }
 
