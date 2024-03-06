@@ -29,7 +29,7 @@ const MobileNavbar = () => {
         </p>
       </div>
 
-      <div className={`${styles.listContainer} ${open ? styles.active : ''}`}>
+      <div>
         <div
           onClick={handleMenu}
           className={`${styles.bars} ${open ? styles.active : ''}`}
