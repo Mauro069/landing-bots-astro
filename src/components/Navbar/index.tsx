@@ -25,37 +25,37 @@ const MobileNavbar = () => {
           <img className={styles.icon} src='/favicon.svg' />
         </a>
         <p>
-          A proyect made by <b>Frank bots maker</b>
+          A proyect made by <br /> <b>Frank bots maker</b>
         </p>
       </div>
 
-      <div
-        onClick={handleMenu}
-        className={`${styles.bars} ${open ? styles.active : ''}`}
-      >
-        <span className={`${styles.bar_1} ${styles.bar}`}></span>
-        <span className={`${styles.bar_2} ${styles.bar}`}></span>
-        <span className={`${styles.bar_3} ${styles.bar}`}></span>
-      </div>
-
-      {open && (
+      <div className={`${styles.listContainer} ${open ? styles.active : ''}`}>
         <div
-          className={`${styles.list} animate__animated animate__bounceInRight`}
+          onClick={handleMenu}
+          className={`${styles.bars} ${open ? styles.active : ''}`}
         >
-          <div className={styles.links}>
-            {navLinks.map(link => (
-              <a
-                onClick={handleMenu}
-                key={link.href}
-                className={styles.link}
-                href={link.href}
-              >
-                {link.title}
-              </a>
-            ))}
-          </div>
+          <span className={`${styles.bar_1} ${styles.bar}`}></span>
+          <span className={`${styles.bar_2} ${styles.bar}`}></span>
+          <span className={`${styles.bar_3} ${styles.bar}`}></span>
         </div>
-      )}
+
+        {open && (
+          <div className={`${styles.list}`}>
+            <div className={styles.links}>
+              {navLinks.map(link => (
+                <a
+                  onClick={handleMenu}
+                  key={link.href}
+                  className={styles.link}
+                  href={link.href}
+                >
+                  {link.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </nav>
   )
 }
