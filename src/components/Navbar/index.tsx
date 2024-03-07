@@ -27,10 +27,12 @@ const MobileNavbar = () => {
             src='/favicon.svg'
           />
         </a>
-        <p>
-          A proyect made by <br /> <b>Frank bots maker</b>
-        </p>
       </div>
+
+      <p className={styles.proyect}>
+        <p className={styles.p}>A proyect made by</p>
+        <p className={styles.p}>Frank bots maker</p>
+      </p>
 
       <div>
         <div
