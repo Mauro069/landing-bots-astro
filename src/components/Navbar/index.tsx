@@ -18,11 +18,14 @@ const MobileNavbar = () => {
 
   return (
     <nav className={`${styles.navMobile} ${styles.mobile}`}>
-      <div
-        className={`${styles.title} animate__animated animate__bounceInLeft`}
-      >
+      <div className={styles.title}>
         <a href='#welcome' className={styles.icon}>
-          <img width={50} height={50} className={styles.icon} src='/favicon.svg' />
+          <img
+            width={50}
+            height={50}
+            className={styles.icon}
+            src='/favicon.svg'
+          />
         </a>
         <p>
           A proyect made by <br /> <b>Frank bots maker</b>
@@ -63,18 +66,14 @@ const MobileNavbar = () => {
 const DesktopNavbar = () => {
   return (
     <nav className={`${styles.navDesktop} ${styles.desktop}`}>
-      <div
-        className={`${styles.title} animate__animated animate__bounceInLeft`}
-      >
+      <div className={styles.title}>
         <div className={styles.line}></div>
         <p>
           A proyect made by <b>Frank bots maker</b>
         </p>
       </div>
 
-      <div
-        className={`${styles.links} animate__animated animate__bounceInRight`}
-      >
+      <div className={styles.links}>
         {navLinks.map(link => (
           <a key={link.href} className={styles.link} href={link.href}>
             {link.title}

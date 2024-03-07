@@ -16,10 +16,6 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -27,6 +23,35 @@ const { title } = Astro.props;
     <Navbar client:visible />
     <slot />
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".section");
+
+      const fadeIn = (element) => {
+        element.style.opacity = 1;
+        element.style.transform = "translateY(0)";
+      };
+
+      const handleIntersection = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            fadeIn(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const sectionObserver = new IntersectionObserver(handleIntersection, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // Adjust as needed
+      });
+
+      sections.forEach((section) => {
+        sectionObserver.observe(section);
+      });
+    });
+  </script>
 </html>
 <style is:global>
   * {
