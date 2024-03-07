@@ -24,7 +24,7 @@ const MobileNavbar = () => {
             width={50}
             height={50}
             className={styles.icon}
-            src='/favicon.svg'
+            src='/favicon.webp'
           />
         </a>
       </div>

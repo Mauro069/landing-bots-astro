@@ -34,7 +34,7 @@ export const PaymentOptions = ({
             style={{ background: '#FFEF01' }}
             onClick={showCryptoOptions}
           >
-            {show ? 'Show Crypto Payments' : 'Hide Crypto Payments'}
+            {!show ? 'Show Crypto Payments' : 'Hide Crypto Payments'}
           </button>
           {show && (
             <>
