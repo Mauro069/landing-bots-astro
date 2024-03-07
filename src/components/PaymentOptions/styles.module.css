@@ -15,7 +15,6 @@
   padding: 1.5rem;
 
   .modal {
-    max-height: 90vh;
     overflow-y: auto;
     background-color: white;
     color: black;
@@ -28,6 +27,7 @@
     font-family: "N27";
     z-index: 99;
     padding-bottom: 4rem;
+    max-height: 550px;
 
     .title {
       font-size: 32px;
