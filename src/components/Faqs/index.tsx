@@ -6,7 +6,6 @@ export const Faqs = () => {
   const [questionSelected, setQuestionSelected] = useState(faqs[0])
 
   const toggleQuestion = ({ q, a }) => {
-    console.log("toggleQuestion")
     if (q === questionSelected?.q) {
       setQuestionSelected(null)
       return
@@ -16,7 +15,11 @@ export const Faqs = () => {
   }
 
   return (
-    <section style={{cursor: 'pointer'}} id='faq' className={styles['faqs-container']}>
+    <div
+      style={{ cursor: 'pointer' }}
+      id='faq'
+      className={`section ${styles['faqs-container']}`}
+    >
       <h3 className={styles.title}>Frequently Asked Questions</h3>
 
       <div className={styles.faqs}>
@@ -42,6 +45,6 @@ export const Faqs = () => {
           )
         })}
       </div>
-    </section>
+    </div>
   )
 }

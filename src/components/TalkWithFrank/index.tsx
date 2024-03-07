@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { Faqs } from '../../components/Faqs'
 import styles from './TalkWithFrank.module.css'
 
 export const TalkWithFrank = () => {
   const [show, setShow] = useState(true)
 
   return (
-    <section id='contact' className={styles['talk-with-frank']}>
+    <section id='contact' className={`section ${styles['talk-with-frank']}`}>
       <h3 className={styles.title}>Contact</h3>
 
       {show ? (
