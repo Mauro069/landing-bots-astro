@@ -36,7 +36,7 @@ export const PaymentOptions = ({
           >
             {show ? 'Show Crypto Payments' : 'Hide Crypto Payments'}
           </button>
-          {!show && (
+          {show && (
             <>
               <div className={styles.cryptos}>
                 {cryptoOptions.map(option => {
@@ -74,7 +74,7 @@ export const PaymentOptions = ({
 
         <hr />
 
-        {show && (
+        {!show && (
           <>
             <span>To pay with cards, request a payment link via WhastApp</span>
             <a
