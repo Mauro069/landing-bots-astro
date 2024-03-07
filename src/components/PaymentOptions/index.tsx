@@ -20,7 +20,7 @@ export const PaymentOptions = ({
   }
 
   function showCryptoOptions () {
-    setShow(true)
+    setShow(!show)
   }
 
   return (
@@ -34,9 +34,9 @@ export const PaymentOptions = ({
             style={{ background: '#FFEF01' }}
             onClick={showCryptoOptions}
           >
-            Crypto Payment
+            {show ? 'Show Crypto Payments' : 'Hide Crypto Payments'}
           </button>
-          {show && (
+          {!show && (
             <>
               <div className={styles.cryptos}>
                 {cryptoOptions.map(option => {
@@ -74,24 +74,29 @@ export const PaymentOptions = ({
 
         <hr />
 
-        <span>To pay with cards, request a payment link via WhastApp</span>
-        <a
-          style={{ background: '#0DBF42', color: 'white' }}
-          href='https://wa.link/yves5o'
-          target='_blank'
-        >
-          Request
-        </a>
+        {show && (
+          <>
+            <span>To pay with cards, request a payment link via WhastApp</span>
+            <a
+              style={{ background: '#0DBF42', color: 'white' }}
+              href='https://wa.link/yves5o'
+              target='_blank'
+            >
+              Request
+            </a>
 
-        <hr />
-        <a
-          href={coinbaseLink}
-          style={{ background: '#0556FF', color: 'white' }}
-        >
-          Coinbase
-        </a>
+            <hr />
+            <a
+              href={coinbaseLink}
+              style={{ background: '#0556FF', color: 'white' }}
+            >
+              Coinbase
+            </a>
 
-        <hr />
+            <hr />
+          </>
+        )}
+
         <h3 className={styles.title}>Total: ${price}</h3>
 
         <button className={styles.button} onClick={closeModal}>
