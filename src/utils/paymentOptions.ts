@@ -27,32 +27,32 @@ export const coinbaseLinks = {
 
 export const cryptoOptions = [
     {
-        img: '/assets/cryptos/btc.png',
+        img: '/assets/cryptos/btc.webp',
         address: "bc1qs30l5fhph4gzd6mwl2fr5kngvh0suv5hfpywkt",
         title: "BTC"
     },
     {
-        img: '/assets/cryptos/eth.png',
+        img: '/assets/cryptos/eth.webp',
         address: "0x4E5d1Ef01b324f8a2A6977d82398935f5597aAd9",
         title: "ETH"
     },
     {
-        img: '/assets/cryptos/usdc-erc20.png',
+        img: '/assets/cryptos/usdc-erc20.webp',
         address: "0x4E5d1Ef01b324f8a2A6977d82398935f5597aAd9",
         title: "USDC ERC20"
     },
     {
-        img: '/assets/cryptos/usdt-bep20.png',
+        img: '/assets/cryptos/usdt-bep20.webp',
         address: "0x4E5d1Ef01b324f8a2A6977d82398935f5597aAd9",
         title: "USDT BEP20"
     },
     {
-        img: '/assets/cryptos/usdt-erc20.png',
+        img: '/assets/cryptos/usdt-erc20.webp',
         address: "0x4E5d1Ef01b324f8a2A6977d82398935f5597aAd9",
         title: "USDT-ERC20"
     },
     {
-        img: '/assets/cryptos/usdt-trc20.png',
+        img: '/assets/cryptos/usdt-trc20.webp',
         address: "TYQPnJRMdQSVXX2SuEsWDoXKpCQvfbB7ok",
         title: "USDT-TRC20"
     }
