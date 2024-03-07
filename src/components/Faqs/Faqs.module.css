@@ -10,7 +10,7 @@
   font-family: "N27";
   text-align: center;
   gap: 1rem;
-  z-index: -1;
+  z-index: 0;
 
   .title {
     font-family: "Good times";
