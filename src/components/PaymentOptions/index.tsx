@@ -59,7 +59,7 @@ export const PaymentOptions = ({
                 <span style={{ maxWidth: '400px', alignSelf: 'center' }}>
                   <p>Copied address with {copied.coin}: </p>
                   <br />
-                  <p>{copied.address}</p>
+                  <p className={styles.address}>{copied.address}</p>
                 </span>
               )}
               <span>
