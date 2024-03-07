@@ -1,6 +1,7 @@
 ---
 import Card from "./Card.astro";
 import { cards } from "../utils/cards.ts";
+import { Image } from "astro:assets";
 ---
 
 <section id="home" class="info">
@@ -19,11 +20,13 @@ import { cards } from "../utils/cards.ts";
     />
   </div>
 
-  <img
+  <Image
     class="frank"
     src="/assets/frank.png"
     alt="frank bots maker"
-    style="height: 750px;"
+    width={258}
+    height={750}
+    loading="eager"
   />
 
   <div class="cards">

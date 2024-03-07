@@ -23,7 +23,7 @@ export const RobotCard = ({
   return (
     <>
       <div className={styles.card} style={{ borderColor: color, color }}>
-        <img className={styles.bg} src={bgUrl} />
+        <img className={styles.bg} src={bgUrl} alt={title} />
         <div className={styles.info}>
           <h4 className={styles.robot}>{title}</h4>
           <img
