@@ -24,12 +24,16 @@ export const PaymentOptions = ({
   }
 
   return (
-    <div className={styles.bg}>
+    <div className={styles.bg} style={{ zIndex: '98' }}>
       <div className={styles.modal}>
         <h3 className={styles.title}>Payment Methods</h3>
 
         <div className={styles.cryptoContainer}>
-          <button className={styles.button} style={{ background: '#FFEF01' }} onClick={showCryptoOptions}>
+          <button
+            className={styles.button}
+            style={{ background: '#FFEF01' }}
+            onClick={showCryptoOptions}
+          >
             Crypto Payment
           </button>
           {show && (
@@ -42,7 +46,11 @@ export const PaymentOptions = ({
                       className={styles.option}
                       key={option.title}
                     >
-                      <img className={styles.img} src={option.img} alt={option.title} />
+                      <img
+                        className={styles.img}
+                        src={option.img}
+                        alt={option.title}
+                      />
                     </div>
                   )
                 })}
@@ -56,7 +64,9 @@ export const PaymentOptions = ({
               )}
               <span>
                 Send proof of payment{' '}
-                <a className={styles.here} href='https://t.me/FrankBOTsMaker'>here</a>
+                <a className={styles.here} href='https://t.me/FrankBOTsMaker'>
+                  here
+                </a>
               </span>
             </>
           )}
@@ -84,7 +94,9 @@ export const PaymentOptions = ({
         <hr />
         <h3 className={styles.title}>Total: ${price}</h3>
 
-        <button className={styles.button} onClick={closeModal}>Close</button>
+        <button className={styles.button} onClick={closeModal}>
+          Close
+        </button>
       </div>
     </div>
   )
