@@ -1,45 +1,45 @@
-import { useState } from "react";
-import { cryptoOptions } from "../../utils/paymentOptions";
-import styles from "./styles.module.css";
+import { useState } from 'react'
+import { cryptoOptions } from '../../utils/paymentOptions'
+import styles from './styles.module.css'
 
 export const PaymentOptions = ({
   coinbaseLink,
   closeModal,
-  price,
+  price
 }: {
-  coinbaseLink: string;
-  closeModal: () => void;
-  price: number;
+  coinbaseLink: string
+  closeModal: () => void
+  price: number
 }) => {
-  const [show, setShow] = useState(false);
-  const [copied, setCopied] = useState<any>(null);
+  const [show, setShow] = useState(false)
+  const [copied, setCopied] = useState<any>(null)
 
-  function copyAddress(address: string, coin: string) {
-    navigator.clipboard.writeText(address);
-    setCopied({ address, coin });
+  function copyAddress (address: string, coin: string) {
+    navigator.clipboard.writeText(address)
+    setCopied({ address, coin })
   }
 
-  function showCryptoOptions() {
-    setShow(!show);
+  function showCryptoOptions () {
+    setShow(!show)
   }
 
   return (
-    <div className={styles.bg} style={{ zIndex: "98" }}>
+    <div className={styles.bg} style={{ zIndex: '98' }}>
       <div className={styles.modal}>
         <h3 className={styles.title}>Payment Methods</h3>
 
         <div className={styles.cryptoContainer}>
           <button
             className={styles.button}
-            style={{ background: "#FFEF01" }}
+            style={{ background: '#FFEF01' }}
             onClick={showCryptoOptions}
           >
-            {!show ? "Show Crypto Payments" : "Hide Crypto Payments"}
+            {!show ? 'Show Crypto Payments' : 'Hide Crypto Payments'}
           </button>
           {show && (
             <>
               <div className={styles.cryptos}>
-                {cryptoOptions.map((option) => {
+                {cryptoOptions.map(option => {
                   return (
                     <div
                       onClick={() => copyAddress(option.address, option.title)}
@@ -52,19 +52,19 @@ export const PaymentOptions = ({
                         alt={option.title}
                       />
                     </div>
-                  );
+                  )
                 })}
               </div>
               {copied && (
-                <span style={{ maxWidth: "400px", alignSelf: "center" }}>
+                <span style={{ maxWidth: '400px', alignSelf: 'center' }}>
                   <p>Copied address with {copied.coin}: </p>
                   <br />
                   <p className={styles.address}>{copied.address}</p>
                 </span>
               )}
               <span>
-                Send proof of payment{" "}
-                <a className={styles.here} href="https://t.me/FrankBOTsMaker">
+                Send proof of payment{' '}
+                <a className={styles.here} href='https://t.me/FrankBOTsMaker'>
                   here
                 </a>
               </span>
@@ -76,9 +76,19 @@ export const PaymentOptions = ({
 
         {!show && (
           <>
+            <span>To pay with cards, request a payment link via Telegram</span>
+            <a
+              style={{ background: '#28a7e8', color: 'white' }}
+              href='https://t.me/FrankBOTsMaker'
+              target='_blank'
+            >
+              Request
+            </a>
+
+            <hr />
             <a
               href={coinbaseLink}
-              style={{ background: "#0556FF", color: "white" }}
+              style={{ background: '#0556FF', color: 'white' }}
             >
               Coinbase
             </a>
@@ -94,5 +104,5 @@ export const PaymentOptions = ({
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
